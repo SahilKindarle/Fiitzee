@@ -75,10 +75,40 @@
             <a href="index.html" class="flex items-center space-x-2">
                 <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-10 w-auto">
             </a>
-            <a href="contact.html" class="text-sm font-medium text-muted-foreground hover:text-fitzee-navy">Need
-                Help?</a>
+            <div class="flex items-center space-x-4">
+                <a href="contact.html"
+                    class="hidden md:block text-sm font-medium text-muted-foreground hover:text-fitzee-navy">Need
+                    Help?</a>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-fitzee-navy">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-background md:hidden text-foreground">
+        <div class="container py-8 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center">
+                    <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-8 w-auto">
+                </a>
+                <button id="mobile-menu-close" class="p-2 text-fitzee-navy">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-2xl font-bold text-fitzee-navy mb-auto">
+                <a href="index.html" class="hover:text-fitzee-blue transition-colors">Home</a>
+                <a href="about.html" class="hover:text-fitzee-blue transition-colors">About Us</a>
+                <a href="programs.html" class="hover:text-fitzee-blue transition-colors">Programs</a>
+                <a href="pricing.html" class="hover:text-fitzee-blue transition-colors">Pricing</a>
+                <a href="contact.html" class="hover:text-fitzee-blue transition-colors">Contact</a>
+            </nav>
+            <div class="space-y-6 mt-auto">
+                <a href="index.html" class="btn btn-primary btn-lg w-full">Back to Home</a>
+            </div>
+        </div>
+    </div>
 
     <main class="py-12">
         <div class="container max-w-3xl">
@@ -224,11 +254,12 @@
                         </div>
                         <div class="flex gap-4">
                             <button type="button" class="btn btn-outline w-full" onclick="nextStep(2)">Back</button>
-                            <button type="button" class="btn btn-primary w-full shadow-lg" onclick="showSuccess()">Submit</button>
+                            <button type="button" class="btn btn-primary w-full shadow-lg"
+                                onclick="showSuccess()">Submit</button>
                         </div>
                     </div>
 
-                    <!-- Step 4: Payment --> 
+                    <!-- Step 4: Payment -->
                     <div id="step-4" class="space-y-6 hidden">
                         <h2 class="text-2xl font-bold text-fitzee-navy">Secure Payment</h2>
                         <div class="bg-gray-50 p-4 rounded-lg mb-6">

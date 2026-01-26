@@ -93,6 +93,33 @@
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[100] bg-background md:hidden text-foreground">
+        <div class="container py-8 h-full flex flex-col">
+            <div class="flex items-center justify-between mb-12">
+                <a href="index.html" class="flex items-center">
+                    <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-8 w-auto">
+                </a>
+                <button id="mobile-menu-close" class="p-2 text-fitzee-navy">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 text-2xl font-bold text-fitzee-navy mb-auto">
+                <a href="index.html" class="hover:text-fitzee-blue transition-colors">Home</a>
+                <a href="about.html" class="hover:text-fitzee-blue transition-colors">About Us</a>
+                <a href="programs.html" class="hover:text-fitzee-blue transition-colors">Programs</a>
+                <a href="pricing.html" class="hover:text-fitzee-blue transition-colors">Pricing</a>
+                <a href="contact.html" class="hover:text-fitzee-blue transition-colors">Contact</a>
+            </nav>
+            <div class="space-y-6 mt-auto">
+                <div class="text-lg font-semibold text-fitzee-navy text-primary">
+                    Call: <a href="tel:+919699849478" class="text-fitzee-blue">+91 9699849478</a>
+                </div>
+                <a href="register.html" class="btn btn-primary btn-lg w-full">Register Now</a>
+            </div>
+        </div>
+    </div>
+
     <main class="py-16 md:py-24">
         <!-- Hero Story -->
         <div class="container text-center mb-24">

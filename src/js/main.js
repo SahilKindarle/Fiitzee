@@ -5,8 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.remove('hidden');
         });
+
+        const closeBtn = document.getElementById('mobile-menu-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
     }
 
     // FAQ Accordion Logic (if present on page)
