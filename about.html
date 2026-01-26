@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission - Fitzee | 10,000 Kids Active by 2027</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: { center: true, padding: "2rem" },
+                extend: {
+                    colors: {
+                        fitzee: {
+                            navy: "#1e3a5f",
+                            blue: "#00bfff",
+                            lime: "#7ed957",
+                            cyan: "#00a8cc",
+                            electric: "#a0d911",
+                            dark: "#1a1a1a",
+                            textDark: "#2c3e50"
+                        },
+                        border: "hsl(214.3 31.8% 91.4%)",
+                        input: "hsl(214.3 31.8% 91.4%)",
+                        ring: "hsl(214 52% 25%)",
+                        background: "white",
+                        foreground: "hsl(222.2 84% 4.9%)",
+                        primary: { DEFAULT: "#1e3a5f", foreground: "white" },
+                        secondary: { DEFAULT: "#7ed957", foreground: "#1e3a5f" },
+                        muted: { DEFAULT: "hsl(210 40% 96.1%)", foreground: "hsl(215.4 16.3% 46.9%)" },
+                        accent: { DEFAULT: "#00bfff", foreground: "hsl(222.2 47.4% 11.2%)" },
+                        card: { DEFAULT: "white", foreground: "hsl(222.2 84% 4.9%)" },
+                    },
+                    borderRadius: {
+                        lg: "0.5rem",
+                        md: "calc(0.5rem - 2px)",
+                        sm: "calc(0.5rem - 4px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn { @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2; }
+            .btn-lg { @apply h-12 px-8 text-base; }
+            .btn-primary { @apply bg-fitzee-navy text-white hover:bg-fitzee-navy/90 shadow-lg; }
+            .btn-secondary { @apply bg-fitzee-lime text-fitzee-navy hover:bg-fitzee-lime/90 shadow-lg shadow-lime-500/20; }
+            .btn-outline { @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground; }
+            .btn-ghost { @apply hover:bg-accent hover:text-accent-foreground; }
+            .badge { @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2; }
+            .h2-style { @apply text-3xl font-bold tracking-tight text-fitzee-navy sm:text-4xl; }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-white text-fitzee-textDark antialiased">
+
+    <header
+        class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div class="container flex h-16 items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-10 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html" class="transition-colors hover:text-fitzee-blue text-muted-foreground">Home</a>
+                <a href="about.html"
+                    class="transition-colors hover:text-fitzee-blue text-fitzee-navy font-semibold">About Us</a>
+                <a href="programs.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Programs</a>
+                <a href="pricing.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Pricing</a>
+                <a href="contact.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="register.html" class="btn btn-primary">Register Now</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-fitzee-navy"><i data-lucide="menu"
+                    class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <!-- Hero Story -->
+        <div class="container text-center mb-24">
+            <h1 class="text-5xl md:text-7xl font-black text-fitzee-navy mb-8 leading-tight">We're on a mission to <br>
+                <span class="text-fitzee-blue">reclaim childhood.</span>
+            </h1>
+            <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed italic">"The playground is the
+                only classroom where children learn to be human."</p>
+        </div>
+
+        <!-- Our Story -->
+        <section class="container mb-32">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div
+                    class="bg-gray-100 rounded-3xl aspect-square flex items-center justify-center text-4xl shadow-inner opacity-40 italic">
+                    [Image: Founders in a park]</div>
+                <div>
+                    <h2 class="text-3xl font-black text-fitzee-navy mb-6 uppercase tracking-tight">Our Story</h2>
+                    <div class="space-y-6 text-sm text-muted-foreground leading-relaxed">
+                        <p>Fitzee didn't start in a boardroom. It started in a park in Bangalore, watching a row of kids
+                            sitting on a bench, all staring at different phones, while the beautiful evening sun went to
+                            waste.</p>
+                        <p>We realized that parent's aren't the problem—the environment is. Lack of safe space, lack of
+                            structure, and the "busy parent" trap had pushed childhood indoors.</p>
+                        <p>We built Fitzee to bring the structure of professional sports coaching directly into the
+                            comfort of your society. Today, we are Bangalore's fastest growing community-led fitness
+                            brand for children.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission -->
+        <section class="py-24 bg-fitzee-navy text-white mb-32">
+            <div class="container overflow-hidden relative">
+                <div class="text-center relative z-10">
+                    <h2 class="text-4xl md:text-6xl font-black mb-12">10,000 Kids Active <br> <span
+                            class="text-fitzee-lime">by 2027</span></h2>
+                    <p class="text-lg opacity-70 max-w-2xl mx-auto mb-12">That's our goal. 10,000 children who choose
+                        the park over the screen, the ball over the button, and real sweat over digital points.</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
+                            <div class="text-3xl font-black mb-2">500+</div>
+                            <p class="text-xs uppercase font-bold tracking-widest opacity-60">Active Kids</p>
+                        </div>
+                        <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
+                            <div class="text-3xl font-black mb-2">40+</div>
+                            <p class="text-xs uppercase font-bold tracking-widest opacity-60">Gated Societies</p>
+                        </div>
+                        <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
+                            <div class="text-3xl font-black mb-2">25+</div>
+                            <p class="text-xs uppercase font-bold tracking-widest opacity-60">Certified Coaches</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Decoration -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-fitzee-blue/20 rounded-full blur-3xl"></div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="container mb-32">
+            <h2 class="text-3xl font-black text-fitzee-navy text-center mb-16">The Fitzee Way (Our Values)</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div
+                    class="p-6 border rounded-2xl bg-gray-50/50 hover:bg-white transition-colors hover:shadow-xl group">
+                    <i data-lucide="heart"
+                        class="w-10 h-10 text-fitzee-blue mb-4 transition-transform group-hover:scale-110"></i>
+                    <h3 class="font-bold mb-2">Fun First</h3>
+                    <p class="text-xs opacity-70">If it's not fun, they won't come back. We turn every drill into an
+                        adventure.</p>
+                </div>
+                <div
+                    class="p-6 border rounded-2xl bg-gray-50/50 hover:bg-white transition-colors hover:shadow-xl group">
+                    <i data-lucide="shield"
+                        class="w-10 h-10 text-fitzee-blue mb-4 transition-transform group-hover:scale-110"></i>
+                    <h3 class="font-bold mb-2">Safety Always</h3>
+                    <p class="text-xs opacity-70">Zero compromises. From equipment quality to trainer background checks.
+                    </p>
+                </div>
+                <div
+                    class="p-6 border rounded-2xl bg-gray-50/50 hover:bg-white transition-colors hover:shadow-xl group">
+                    <i data-lucide="target"
+                        class="w-10 h-10 text-fitzee-blue mb-4 transition-transform group-hover:scale-110"></i>
+                    <h3 class="font-bold mb-2">Real Growth</h3>
+                    <p class="text-xs opacity-70">We measure what matters: stamina, coordination, and social confidence.
+                    </p>
+                </div>
+                <div
+                    class="p-6 border rounded-2xl bg-gray-50/50 hover:bg-white transition-colors hover:shadow-xl group">
+                    <i data-lucide="home"
+                        class="w-10 h-10 text-fitzee-blue mb-4 transition-transform group-hover:scale-110"></i>
+                    <h3 class="font-bold mb-2">In the Society</h3>
+                    <p class="text-xs opacity-70">We believe community play is the best form of socialization for urban
+                        kids.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Metrics CTA -->
+        <section class="container text-center">
+            <div class="bg-gray-100 rounded-[3rem] p-16 border-2 border-white shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-black text-fitzee-navy mb-6 uppercase tracking-tight">Want to be part of
+                        the story?</h2>
+                    <p class="text-muted-foreground mb-10 max-w-xl mx-auto font-medium">We are always looking for
+                        passionate trainers, community leads, and society partners.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="contact.html" class="btn btn-primary px-8">Society Partnerships</a>
+                        <a href="contact.html" class="btn border-fitzee-navy text-fitzee-navy px-8">Join the Coaching
+                            Team</a>
+                    </div>
+                </div>
+                <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-fitzee-lime/20 rounded-full blur-2xl"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-sm border-t border-gray-800">
+        <div class="container text-center font-bold tracking-widest uppercase text-[10px] opacity-40">
+            &copy; 2026 Fitzee India. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script> lucide.createIcons(); </script>
+</body>
+
+</html>

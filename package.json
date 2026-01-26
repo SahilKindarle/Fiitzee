@@ -1,0 +1,26 @@
+{
+  "name": "fiitzee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/css/styles.css -o ./src/css/output.css --watch",
+    "build": "npx tailwindcss -i ./src/css/styles.css -o ./src/css/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahilKindarle/Fiitzee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SahilKindarle/Fiitzee/issues"
+  },
+  "homepage": "https://github.com/SahilKindarle/Fiitzee#readme",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}

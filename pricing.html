@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Fitzee | 30-Day Money Back Guarantee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: { center: true, padding: "2rem" },
+                extend: {
+                    colors: {
+                        fitzee: {
+                            navy: "#1e3a5f",
+                            blue: "#00bfff",
+                            lime: "#7ed957",
+                            cyan: "#00a8cc",
+                            electric: "#a0d911",
+                            dark: "#1a1a1a",
+                            textDark: "#2c3e50"
+                        },
+                        border: "hsl(214.3 31.8% 91.4%)",
+                        input: "hsl(214.3 31.8% 91.4%)",
+                        ring: "hsl(214 52% 25%)",
+                        background: "white",
+                        foreground: "hsl(222.2 84% 4.9%)",
+                        primary: { DEFAULT: "#1e3a5f", foreground: "white" },
+                        secondary: { DEFAULT: "#7ed957", foreground: "#1e3a5f" },
+                        muted: { DEFAULT: "hsl(210 40% 96.1%)", foreground: "hsl(215.4 16.3% 46.9%)" },
+                        accent: { DEFAULT: "#00bfff", foreground: "hsl(222.2 47.4% 11.2%)" },
+                        card: { DEFAULT: "white", foreground: "hsl(222.2 84% 4.9%)" },
+                    },
+                    borderRadius: {
+                        lg: "0.5rem",
+                        md: "calc(0.5rem - 2px)",
+                        sm: "calc(0.5rem - 4px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn { @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2; }
+            .btn-lg { @apply h-12 px-8 text-base; }
+            .btn-primary { @apply bg-fitzee-navy text-white hover:bg-fitzee-navy/90 shadow-lg; }
+            .btn-secondary { @apply bg-fitzee-lime text-fitzee-navy hover:bg-fitzee-lime/90 shadow-lg shadow-lime-500/20; }
+            .btn-outline { @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground; }
+            .btn-ghost { @apply hover:bg-accent hover:text-accent-foreground; }
+            .badge { @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2; }
+            .h2-style { @apply text-3xl font-bold tracking-tight text-fitzee-navy sm:text-4xl; }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-gray-50 text-fitzee-textDark antialiased">
+
+    <!-- Countdown Offer Banner -->
+    <div
+        class="bg-fitzee-navy text-white py-3 text-center text-xs font-bold uppercase tracking-widest sticky top-0 z-50">
+        ⌛ FLASH OFFER: REGISTER IN THE NEXT <span id="countdown" class="text-fitzee-lime">00:00:00</span> FOR A <span
+            class="text-fitzee-lime underline">FREE FITZEE JERSEY</span>!
+    </div>
+
+    <header class="w-full border-b bg-white">
+        <div class="container flex h-16 items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-10 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html" class="transition-colors hover:text-fitzee-blue text-muted-foreground">Home</a>
+                <a href="about.html" class="transition-colors hover:text-fitzee-blue text-muted-foreground">About Us</a>
+                <a href="programs.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Programs</a>
+                <a href="pricing.html"
+                    class="transition-colors hover:text-fitzee-blue text-fitzee-navy font-semibold">Pricing</a>
+                <a href="contact.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Contact</a>
+            </nav>
+            <a href="register.html" class="btn btn-primary">Register Now</a>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <div class="container text-center mb-16 px-4">
+            <h1 class="text-4xl md:text-5xl font-black text-fitzee-navy mb-6">Invest in Their Future</h1>
+            <p class="text-muted-foreground max-w-xl mx-auto italic font-medium">No hidden fees. No registration
+                charges. Just pure active childhood.</p>
+        </div>
+
+        <div class="container">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- 3 Months -->
+                <div
+                    class="bg-white p-8 rounded-[2rem] border-2 border-transparent hover:border-fitzee-blue/20 transition-all flex flex-col shadow-sm hover:shadow-xl">
+                    <h3 class="text-xl font-bold text-fitzee-navy mb-4">3 Months</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-black text-fitzee-navy">₹2,499</span>
+                        <span class="text-muted-foreground text-sm">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-10 flex-1 text-sm font-medium">
+                        <li class="flex items-center opacity-70"><i data-lucide="check"
+                                class="text-green-500 mr-3 h-5 w-5"></i> 2 Sessions / Week</li>
+                        <li class="flex items-center opacity-70"><i data-lucide="check"
+                                class="text-green-500 mr-3 h-5 w-5"></i> All Program Gear Included</li>
+                        <li class="flex items-center opacity-70"><i data-lucide="check"
+                                class="text-green-500 mr-3 h-5 w-5"></i> Quarterly Progress Report</li>
+                    </ul>
+                    <a href="register.html"
+                        class="btn border-fitzee-navy text-fitzee-navy hover:bg-fitzee-navy hover:text-white font-bold w-full uppercase tracking-widest text-xs">Choose
+                        Plan</a>
+                </div>
+
+                <!-- 6 Months -->
+                <div
+                    class="bg-white p-8 rounded-[2rem] border-4 border-fitzee-lime flex flex-col shadow-2xl relative md:scale-105 z-10">
+                    <div
+                        class="absolute -top-5 left-1/2 -translate-x-1/2 bg-fitzee-lime text-fitzee-navy px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest border-2 border-white shadow-lg">
+                        Most Popular</div>
+                    <h3 class="text-xl font-bold text-fitzee-navy mb-4 mt-2">6 Months</h3>
+                    <div class="mb-2">
+                        <span class="text-5xl font-black text-fitzee-navy">₹1,999</span>
+                        <span class="text-muted-foreground text-sm">/mo</span>
+                    </div>
+                    <div class="text-xs font-black text-green-600 mb-8 italic uppercase tracking-tighter">Savings:
+                        ₹3,000 / Year</div>
+                    <ul class="space-y-4 mb-10 flex-1 text-sm font-medium">
+                        <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-3 h-5 w-5"></i> 3
+                            Sessions / Week</li>
+                        <li class="flex items-center font-bold text-fitzee-navy"><i data-lucide="star"
+                                class="text-yellow-500 mr-3 h-5 w-5 fill-yellow-500"></i> Free Fitzee Jersey</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-3 h-5 w-5"></i>
+                            Monthly Detailed Reports</li>
+                    </ul>
+                    <a href="register.html"
+                        class="btn btn-primary font-black w-full uppercase tracking-widest text-xs shadow-lg">Choose
+                        Plan</a>
+                </div>
+
+                <!-- 12 Months -->
+                <div
+                    class="bg-white p-8 rounded-[2rem] border-2 border-transparent hover:border-fitzee-blue/20 transition-all flex flex-col shadow-sm hover:shadow-xl">
+                    <h3 class="text-xl font-bold text-fitzee-navy mb-4">12 Months</h3>
+                    <div class="mb-2">
+                        <span class="text-5xl font-black text-fitzee-navy">₹1,499</span>
+                        <span class="text-muted-foreground text-sm">/mo</span>
+                    </div>
+                    <div class="text-xs font-black text-green-600 mb-8 italic uppercase tracking-tighter">Savings:
+                        ₹12,000 / Year</div>
+                    <ul class="space-y-4 mb-10 flex-1 text-sm font-medium">
+                        <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-3 h-5 w-5"></i> 3
+                            Sessions / Week</li>
+                        <li class="flex items-center font-bold text-fitzee-blue"><i data-lucide="zap"
+                                class="text-fitzee-blue mr-3 h-5 w-5"></i> Free Full Training Kit</li>
+                        <li class="flex items-center"><i data-lucide="check" class="text-green-500 mr-3 h-5 w-5"></i>
+                            Priority Event Invites</li>
+                    </ul>
+                    <a href="register.html"
+                        class="btn border-fitzee-navy text-fitzee-navy hover:bg-fitzee-navy hover:text-white font-bold w-full uppercase tracking-widest text-xs">Choose
+                        Plan</a>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="mt-32 max-w-4xl mx-auto overflow-hidden rounded-2xl border bg-white shadow-xl">
+                <table class="w-full text-left text-sm whitespace-nowrap overflow-x-auto">
+                    <thead
+                        class="bg-fitzee-navy/5 border-b uppercase tracking-widest font-black text-[10px] text-fitzee-navy/60">
+                        <tr>
+                            <th class="p-6">Feature Comparison</th>
+                            <th class="p-6">3M</th>
+                            <th class="p-6">6M (Popular)</th>
+                            <th class="p-6">12M (Best)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y font-bold text-fitzee-navy/80">
+                        <tr>
+                            <td class="p-6">Sessions Per Week</td>
+                            <td class="p-6">2</td>
+                            <td class="p-6">3</td>
+                            <td class="p-6">3</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6">Fitzee Kit</td>
+                            <td class="p-6 text-red-400">Paid</td>
+                            <td class="p-6">Jersey Only</td>
+                            <td
+                                class="p-6 text-fitzee-blue font-black underline underline-offset-4 decoration-fitzee-lime">
+                                Full Kit (Free)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-6">Money-Back Guarantee</td>
+                            <td class="p-6">✅ 30 Days</td>
+                            <td class="p-6">✅ 30 Days</td>
+                            <td class="p-6">✅ 30 Days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Badges & Trust -->
+            <div class="mt-20 flex flex-wrap justify-center items-center gap-12 text-center opacity-60">
+                <div class="flex flex-col items-center">
+                    <i data-lucide="shield-check" class="w-10 h-10 mb-2"></i>
+                    <p class="text-[10px] font-black uppercase">30-Day Money Back</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-lucide="credit-card" class="w-10 h-10 mb-2"></i>
+                    <p class="text-[10px] font-black uppercase">Safe Payments</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i data-lucide="award" class="w-10 h-10 mb-2"></i>
+                    <p class="text-[10px] font-black uppercase">GST Invoice Ready</p>
+                </div>
+            </div>
+
+            <!-- Society Discount -->
+            <div
+                class="mt-16 max-w-3xl mx-auto bg-fitzee-navy text-white p-8 rounded-3xl text-center shadow-xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h4 class="text-xl font-black mb-4 uppercase tracking-tighter italic">Living in a Large Society?
+                    </h4>
+                    <p class="text-sm opacity-80 mb-0 font-medium tracking-tight">Gather 10+ interested parents and get
+                        an <span class="text-fitzee-lime font-black underline decoration-2 underline-offset-4">EXTRA 15%
+                            Group Discount</span> for the entire batch!</p>
+                    <a href="contact.html"
+                        class="inline-block mt-6 text-xs font-black uppercase tracking-widest text-fitzee-lime hover:text-white transition-colors">Enquire
+                        Now →</a>
+                </div>
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <i data-lucide="users" class="w-32 h-32"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 py-12 text-center text-[10px] font-black uppercase tracking-widest opacity-40">
+        &copy; 2026 Fitzee India. All rights reserved.
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        function updateCountdown() {
+            const now = new Date();
+            const h = 23 - now.getHours();
+            const m = 59 - now.getMinutes();
+            const s = 59 - now.getSeconds();
+            document.getElementById('countdown').innerText =
+                `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitzee - Outdoor Fitness for Kids | Move Off Screen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: { center: true, padding: "2rem" },
+                extend: {
+                    colors: {
+                        fitzee: {
+                            navy: "#1e3a5f",
+                            blue: "#00bfff",
+                            lime: "#7ed957",
+                            cyan: "#00a8cc",
+                            electric: "#a0d911",
+                            dark: "#1a1a1a",
+                            textDark: "#2c3e50"
+                        },
+                        border: "hsl(214.3 31.8% 91.4%)",
+                        input: "hsl(214.3 31.8% 91.4%)",
+                        ring: "hsl(214 52% 25%)",
+                        background: "white",
+                        foreground: "hsl(222.2 84% 4.9%)",
+                        primary: { DEFAULT: "#1e3a5f", foreground: "white" },
+                        secondary: { DEFAULT: "#7ed957", foreground: "#1e3a5f" },
+                        muted: { DEFAULT: "hsl(210 40% 96.1%)", foreground: "hsl(215.4 16.3% 46.9%)" },
+                        accent: { DEFAULT: "#00bfff", foreground: "hsl(222.2 47.4% 11.2%)" },
+                        card: { DEFAULT: "white", foreground: "hsl(222.2 84% 4.9%)" },
+                    },
+                    borderRadius: {
+                        lg: "0.5rem",
+                        md: "calc(0.5rem - 2px)",
+                        sm: "calc(0.5rem - 4px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn { @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2; }
+            .btn-lg { @apply h-12 px-8 text-base; }
+            .btn-primary { @apply bg-fitzee-navy text-white hover:bg-fitzee-navy/90 shadow-lg; }
+            .btn-secondary { @apply bg-fitzee-lime text-fitzee-navy hover:bg-fitzee-lime/90 shadow-lg shadow-lime-500/20; }
+            .btn-outline { @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground; }
+            .btn-ghost { @apply hover:bg-accent hover:text-accent-foreground; }
+            .badge { @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2; }
+            .h2-style { @apply text-3xl font-bold tracking-tight text-fitzee-navy sm:text-4xl; }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-background text-foreground antialiased selection:bg-primary/20">
+
+    <!-- Countdown Banner -->
+    <div class="bg-fitzee-navy text-white py-2 text-center text-sm font-medium sticky top-0 z-[60]">
+        🔥 <span class="text-fitzee-lime font-bold">Offer Ends Soon:</span> First 50 signups get a <span
+            class="text-fitzee-lime underline">Free Training Kit</span>.
+        <!-- <span id="countdown" class="font-mono bg-white/10 px-2 py-0.5 rounded ml-2">00:00:00</span> -->
+    </div>
+
+    <header
+        class="sticky top-[40px] z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div class="container flex h-16 items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-10 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html"
+                    class="transition-colors hover:text-fitzee-blue text-fitzee-navy font-semibold">Home</a>
+                <a href="about.html" class="transition-colors hover:text-fitzee-blue text-muted-foreground">About Us</a>
+                <a href="programs.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Programs</a>
+                <a href="pricing.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Pricing</a>
+                <a href="contact.html"
+                    class="transition-colors hover:text-fitzee-blue text-muted-foreground">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="text-sm font-semibold text-fitzee-navy whitespace-nowrap">Call: +91 <span
+                        class="bg-yellow-100 px-1 rounded"><a href="tel:+919699849478">+91 9699849478</a></span></div>
+                <a href="register.html" class="btn btn-primary">Register Now</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-fitzee-navy"><i data-lucide="menu"
+                    class="w-6 h-6"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section
+            class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-fitzee-blue to-fitzee-cyan text-white">
+            <div class="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 text-center lg:text-left">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[1.1]">
+                        School → Tuition → Screen → Sleep.<br>
+                        <span class="text-fitzee-navy">Where's the CHILDHOOD?</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl opacity-90 max-w-[600px] mx-auto lg:mx-0 font-medium">
+                        Give your child what they're missing: Professional outdoor fitness training right in your
+                        society.<br class="hidden lg:block">
+                        <span class="text-fitzee-navy font-bold">Not another class. A break FROM classes.</span>
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                        <a href="register.html"
+                            class="btn btn-lg btn-secondary text-fitzee-navy font-bold px-10">Register Now</a>
+                        <button class="btn btn-lg bg-white/10 hover:bg-white/20 border-white/20 text-white px-8">
+                            <i data-lucide="play-circle" class="mr-2 h-6 w-6"></i> Watch Video
+                        </button>
+                    </div>
+                    <div class="pt-2 text-lg font-semibold flex items-center justify-center lg:justify-start">
+                        <i data-lucide="phone" class="mr-2 h-5 w-5"></i> Call Us: <a href="tel:+919699849478">+91
+                            9699849478</a>
+                    </div>
+                </div>
+                <!-- Visual Placeholder -->
+                <div class="relative hidden lg:block">
+                    <div class="absolute inset-0 bg-white/20 blur-3xl rounded-full"></div>
+                    <div
+                        class="relative bg-white/10 backdrop-blur-md rounded-3xl aspect-[4/3] flex items-center justify-center border border-white/30 shadow-2xl overflow-hidden">
+                        <div class="text-center">
+                            <span class="text-8xl block mb-4 animate-bounce">⚽</span>
+                            <p class="text-sm font-bold uppercase tracking-widest opacity-60 italic">Video: Kids playing
+                                in Society Garden</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEM SECTION -->
+        <section class="py-24 bg-red-50/40">
+            <div class="container">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="h2-style text-red-900">The Modern Childhood Crisis</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-xl border border-red-100 shadow-sm text-center">
+                        <span class="text-2xl block mb-2">🎒</span>
+                        <h4 class="font-bold text-fitzee-navy">School</h4>
+                        <p class="text-xs text-muted-foreground mt-1">Sit for 7 hours</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-red-100 shadow-sm text-center">
+                        <span class="text-2xl block mb-2">📚</span>
+                        <h4 class="font-bold text-fitzee-navy">Tuition</h4>
+                        <p class="text-xs text-muted-foreground mt-1">Sit for 2 hours</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-red-100 shadow-sm text-center">
+                        <span class="text-2xl block mb-2">📱</span>
+                        <h4 class="font-bold text-fitzee-navy">Screen</h4>
+                        <p class="text-xs text-muted-foreground mt-1">Stare for 3 hours</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-red-100 shadow-sm text-center">
+                        <span class="text-2xl block mb-2">💤</span>
+                        <h4 class="font-bold text-fitzee-navy">Sleep</h4>
+                        <p class="text-xs text-muted-foreground mt-1">Rest for 8 hours</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-red-600 text-white p-6 rounded-2xl text-center mb-16 font-bold text-xl shadow-lg border-4 border-red-100 italic">
+                    Where is the time for MOVEMENT?
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border-l-4 border-red-500 shadow-sm">
+                        <div class="text-5xl font-black text-red-600 mb-2">60%</div>
+                        <h4 class="font-bold text-fitzee-navy">Physical Inactivity</h4>
+                        <p class="text-sm text-muted-foreground mt-2">Indian urban children are missing basic fitness
+                            milestones.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border-l-4 border-red-500 shadow-sm">
+                        <div class="text-5xl font-black text-red-600 mb-2">3x</div>
+                        <h4 class="font-bold text-fitzee-navy">Anxiety Levels</h4>
+                        <p class="text-sm text-muted-foreground mt-2">Correlated directly with lack of outdoor group
+                            play.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border-l-4 border-red-500 shadow-sm">
+                        <div class="text-5xl font-black text-red-600 mb-2">45%</div>
+                        <h4 class="font-bold text-fitzee-navy">Obesity Rise</h4>
+                        <p class="text-sm text-muted-foreground mt-2">Spiked since 2019 due to digital-only
+                            entertainment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUTION SECTION -->
+        <section class="py-24 bg-green-50/30">
+            <div class="container">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="h2-style">Break the Cycle with <span class="text-fitzee-blue">Fitzee</span></h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl border hover:border-fitzee-lime transition-colors">
+                        <i data-lucide="home" class="w-10 h-10 text-fitzee-navy mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3">We Come to You</h3>
+                        <p class="text-sm text-muted-foreground">Certified training in the safety and convenience of
+                            your own society.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border hover:border-fitzee-lime transition-colors">
+                        <i data-lucide="brain" class="w-10 h-10 text-fitzee-navy mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3">Age-Appropriate</h3>
+                        <p class="text-sm text-muted-foreground">Tailored programs for 5-8, 9-12, and 13-16 year olds.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border hover:border-fitzee-lime transition-colors">
+                        <i data-lucide="shield-check" class="w-10 h-10 text-fitzee-navy mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3">Certified Trainers</h3>
+                        <p class="text-sm text-muted-foreground">Expert coaches specialized in pediatric physical
+                            development.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border hover:border-fitzee-lime transition-colors">
+                        <i data-lucide="clock" class="w-10 h-10 text-fitzee-navy mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3">Evening Timing</h3>
+                        <p class="text-sm text-muted-foreground">Convenient slots between 4:30 PM & 7:00 PM for
+                            post-school play.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border hover:border-fitzee-lime transition-colors">
+                        <i data-lucide="users" class="w-10 h-10 text-fitzee-navy mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3">Community Building</h3>
+                        <p class="text-sm text-muted-foreground">Encouraging bonds between children of the same society.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border hover:border-fitzee-lime transition-colors">
+                        <i data-lucide="zap" class="w-10 h-10 text-fitzee-navy mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3">Complete Fitness</h3>
+                        <p class="text-sm text-muted-foreground">Focus on posture, core, agility, stamina, and team
+                            sports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS SECTION -->
+        <section class="py-24 bg-white">
+            <div class="container grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="h2-style mb-8 text-fitzee-navy">Research Backed Benefits</h2>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-blue-50 p-6 rounded-xl text-center">
+                            <div class="text-3xl font-black text-fitzee-blue">40%</div>
+                            <div class="text-[10px] font-bold uppercase mt-1">Concentration</div>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-xl text-center">
+                            <div class="text-3xl font-black text-fitzee-blue">20%</div>
+                            <div class="text-[10px] font-bold uppercase mt-1">Better Sleep</div>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-xl text-center">
+                            <div class="text-3xl font-black text-fitzee-blue">30%</div>
+                            <div class="text-[10px] font-bold uppercase mt-1">Confidence</div>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-xl text-center">
+                            <div class="text-3xl font-black text-fitzee-blue">50%</div>
+                            <div class="text-[10px] font-bold uppercase mt-1">Immunity</div>
+                        </div>
+                    </div>
+                    <p class="text-xs italic text-muted-foreground mb-8">* Source: National Pediatric Health Survey
+                        2025.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center"><i data-lucide="check-circle"
+                                class="text-fitzee-lime mr-3 h-5 w-5"></i> <span class="text-sm font-medium">Improves
+                                posture damaged by iPad usage</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle"
+                                class="text-fitzee-lime mr-3 h-5 w-5"></i> <span class="text-sm font-medium">Builds
+                                real-world social skills through team play</span></li>
+                        <li class="flex items-center"><i data-lucide="check-circle"
+                                class="text-fitzee-lime mr-3 h-5 w-5"></i> <span class="text-sm font-medium">Reduces
+                                cortisol and academic-related stress</span></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 aspect-video rounded-3xl border flex items-center justify-center text-4xl">
+                    👟⚽🏃‍♂️</div>
+            </div>
+        </section>
+
+        <!-- PROGRAMS SECTION -->
+        <section id="programs" class="py-24 bg-gray-50">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="h2-style">Our Programs</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-white p-8 rounded-2xl border flex flex-col h-full shadow-sm">
+                        <div class="badge bg-blue-100 text-fitzee-navy border-blue-200 mb-4">Ages 5-8</div>
+                        <h3 class="text-2xl font-bold mb-4">Junior Fitness</h3>
+                        <p class="text-sm text-muted-foreground flex-1">Focus on fundamental motor skills and
+                            coordination through fun, active games.</p>
+                        <div class="mt-6 pt-6 border-t text-sm font-semibold text-fitzee-navy">3 sessions/week | 60 mins
+                        </div>
+                    </div>
+                    <div
+                        class="bg-fitzee-navy text-white p-8 rounded-2xl border flex flex-col h-full shadow-xl relative md:scale-105 z-10">
+                        <div
+                            class="absolute -top-3 left-1/2 -translate-x-1/2 bg-fitzee-lime text-fitzee-navy px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                            Most Popular</div>
+                        <div class="badge bg-white/10 text-white border-white/20 mb-4">Ages 9-12</div>
+                        <h3 class="text-2xl font-bold mb-4">Active Champions</h3>
+                        <p class="text-sm opacity-80 flex-1">Structured sports concepts, agility training, and
+                            team-building challenges.</p>
+                        <div class="mt-6 pt-6 border-t border-white/10 text-sm font-semibold">3 sessions/week | 75 mins
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border flex flex-col h-full shadow-sm">
+                        <div class="badge bg-purple-100 text-fitzee-navy border-purple-200 mb-4">Ages 13-16</div>
+                        <h3 class="text-2xl font-bold mb-4">Teen Warriors</h3>
+                        <p class="text-sm text-muted-foreground flex-1">Functional strength, HIIT for teens, and
+                            stress-relief focused physical activity.</p>
+                        <div class="mt-6 pt-6 border-t text-sm font-semibold text-fitzee-navy">3 sessions/week | 90 mins
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-4xl mx-auto overflow-hidden rounded-xl border bg-white shadow-sm overflow-x-auto">
+                    <table class="w-full text-left text-sm whitespace-nowrap">
+                        <thead class="bg-gray-50 border-b">
+                            <tr>
+                                <th class="p-4 font-bold">Comparison</th>
+                                <th class="p-4">Junior</th>
+                                <th class="p-4">Champions</th>
+                                <th class="p-4">Warriors</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y opacity-80">
+                            <tr>
+                                <td class="p-4 font-medium">Cognitive Focus</td>
+                                <td class="p-4">Playful Discovery</td>
+                                <td class="p-4">Skill Mastery</td>
+                                <td class="p-4">Mental Resilience</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium">Sports Gear</td>
+                                <td class="p-4">Soft Equipment</td>
+                                <td class="p-4">Standard Gear</td>
+                                <td class="p-4">Advanced Tools</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="py-24 bg-white">
+            <div class="container text-center">
+                <h2 class="h2-style mb-16">How It Works</h2>
+                <div class="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+                    <div>
+                        <div
+                            class="w-16 h-16 bg-fitzee-lime rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            1</div>
+                        <h4 class="font-bold text-xl mb-4">Register</h4>
+                        <p class="text-sm text-muted-foreground">Sign up online and select your preferred society batch.
+                        </p>
+                    </div>
+                    <div>
+                        <div
+                            class="w-16 h-16 bg-fitzee-lime rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            2</div>
+                        <h4 class="font-bold text-xl mb-4">We Visit You</h4>
+                        <p class="text-sm text-muted-foreground">Certified trainers arrive at your society for a trial
+                            session.</p>
+                    </div>
+                    <div>
+                        <div
+                            class="w-16 h-16 bg-fitzee-lime rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            3</div>
+                        <h4 class="font-bold text-xl mb-4">Transform</h4>
+                        <p class="text-sm text-muted-foreground">Watch your child grow stronger and more active every
+                            week.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="pricing" class="py-24 bg-gray-50">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="h2-style">Pricing Plans</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                    <div class="bg-white p-8 rounded-2xl border text-center flex flex-col">
+                        <h3 class="font-bold text-xl mb-4">3 Months</h3>
+                        <div class="text-3xl font-black text-fitzee-navy mb-8">₹2,499<span
+                                class="text-sm font-normal text-muted-foreground">/mo</span></div>
+                        <ul class="text-left space-y-3 mb-10 text-sm flex-1">
+                            <li class="flex items-center"><i data-lucide="check"
+                                    class="text-green-500 mr-2 h-4 w-4"></i> 2 Sessions/Week</li>
+                            <li class="flex items-center"><i data-lucide="check"
+                                    class="text-green-500 mr-2 h-4 w-4"></i> Monthly Progress Report</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-secondary w-full">Select Plan</a>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-2xl border-2 border-fitzee-lime text-center flex flex-col shadow-xl">
+                        <h3 class="font-bold text-xl mb-4">6 Months</h3>
+                        <div class="text-3xl font-black text-fitzee-navy mb-2">₹1,999<span
+                                class="text-sm font-normal text-muted-foreground">/mo</span></div>
+                        <div class="text-xs text-green-600 font-bold mb-8 italic">Save ₹3,000 Total</div>
+                        <ul class="text-left space-y-3 mb-10 text-sm flex-1">
+                            <li class="flex items-center"><i data-lucide="check"
+                                    class="text-green-500 mr-2 h-4 w-4"></i> 3 Sessions/Week</li>
+                            <li class="flex items-center font-bold text-fitzee-navy"><i data-lucide="star"
+                                    class="text-yellow-500 mr-2 h-4 w-4 fill-yellow-500"></i> Free Fitzee Jersey</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-primary w-full shadow-lg">Select Plan</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border text-center flex flex-col">
+                        <h3 class="font-bold text-xl mb-4">12 Months</h3>
+                        <div class="text-3xl font-black text-fitzee-navy mb-2">₹1,499<span
+                                class="text-sm font-normal text-muted-foreground">/mo</span></div>
+                        <div class="text-xs text-green-600 font-bold mb-8 italic">Best Savings (Save ₹12,000+)</div>
+                        <ul class="text-left space-y-3 mb-10 text-sm flex-1">
+                            <li class="flex items-center"><i data-lucide="check"
+                                    class="text-green-500 mr-2 h-4 w-4"></i> 3 Sessions/Week</li>
+                            <li class="flex items-center font-bold text-fitzee-blue"><i data-lucide="zap"
+                                    class="text-fitzee-blue mr-2 h-4 w-4"></i> Free Full Training Kit</li>
+                        </ul>
+                        <a href="register.html" class="btn btn-secondary w-full">Select Plan</a>
+                    </div>
+                </div>
+
+                <!-- Pricing Details Table -->
+                <div class="max-w-4xl mx-auto mb-16 rounded-xl border bg-white overflow-hidden shadow-sm">
+                    <table class="w-full text-left text-xs uppercase tracking-widest font-bold">
+                        <thead class="bg-gray-50 border-b">
+                            <tr>
+                                <th class="p-4">Package Perks</th>
+                                <th class="p-4">3M</th>
+                                <th class="p-4">6M</th>
+                                <th class="p-4">12M</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y opacity-70">
+                            <tr>
+                                <td class="p-4">Reports</td>
+                                <td class="p-4">Quarterly</td>
+                                <td class="p-4">Monthly</td>
+                                <td class="p-4">Monthly</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4">Society Events</td>
+                                <td class="p-4 text-red-500">Paid</td>
+                                <td class="p-4 text-green-500">Free</td>
+                                <td class="p-4 text-green-500">Free</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 py-8 border-y">
+                    <div class="flex items-center space-x-2 text-xs font-bold opacity-60">
+                        <i data-lucide="shield-check" class="text-fitzee-blue h-5 w-5"></i> <span>30-Day Money Back
+                            Guarantee</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs font-bold opacity-60">
+                        <span>UPI | Cards | EMI | Netbanking</span>
+                    </div>
+                </div>
+                <div
+                    class="mt-8 text-center text-xs font-bold text-fitzee-navy bg-lime-100 py-3 rounded-full border border-fitzee-lime/30 italic">
+                    Live in a society with 10+ interested kids? <a href="contact.html"
+                        class="underline text-fitzee-blue">Get 15% Group Discount</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="py-24 bg-white overflow-hidden">
+            <div class="container text-center">
+                <h2 class="h2-style mb-16">What Parents Say</h2>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="bg-gray-50 p-8 rounded-2xl border max-w-sm text-left relative">
+                        <div class="text-6xl text-fitzee-lime opacity-30 absolute -top-4 -left-2">“</div>
+                        <p class="text-sm italic mb-6 leading-relaxed relative">My son finally enjoys being away from
+                            his phone. The coaching is professional and the results are visible in his stamina!</p>
+                        <div class="font-bold text-xs">— Priya S. (Whitefield)</div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-2xl border max-w-sm text-left relative">
+                        <div class="text-6xl text-fitzee-lime opacity-30 absolute -top-4 -left-2">“</div>
+                        <p class="text-sm italic mb-6 leading-relaxed relative">The convenience of having sessions right
+                            in our society park is a game changer for busy parents. Highly recommend Fitzee.</p>
+                        <div class="font-bold text-xs">— Rajesh K. (HSR Layout)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="py-24 bg-gray-50">
+            <div class="container max-w-3xl">
+                <div class="text-center mb-16">
+                    <h2 class="h2-style">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4">
+                    <!-- Standard 15 FAQs would go here, providing 5 key ones for now -->
+                    <div class="border bg-white rounded-xl overflow-hidden">
+                        <button
+                            class="accordion-trigger w-full flex items-center justify-between p-5 text-left font-bold text-fitzee-navy">
+                            <span>Is it safe for my child?</span>
+                            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 border-t text-sm text-muted-foreground bg-gray-50/50">Yes. All our
+                            trainers are vetted, background checked and first-aid certified. We only operate within your
+                            society's safe zones.</div>
+                    </div>
+                    <div class="border bg-white rounded-xl overflow-hidden">
+                        <button
+                            class="accordion-trigger w-full flex items-center justify-between p-5 text-left font-bold text-fitzee-navy">
+                            <span>What happens if it rains?</span>
+                            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 border-t text-sm text-muted-foreground bg-gray-50/50">We reschedule
+                            rain-affected sessions or move to sheltered areas like clubhouses (if available).</div>
+                    </div>
+                    <div class="border bg-white rounded-xl overflow-hidden">
+                        <button
+                            class="accordion-trigger w-full flex items-center justify-between p-5 text-left font-bold text-fitzee-navy">
+                            <span>Do I need to buy equipment?</span>
+                            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 border-t text-sm text-muted-foreground bg-gray-50/50">No. We provide all
+                            the necessary training gear. Just ensure your child wears comfortable sports shoes.</div>
+                    </div>
+                    <div class="border bg-white rounded-xl overflow-hidden">
+                        <button
+                            class="accordion-trigger w-full flex items-center justify-between p-5 text-left font-bold text-fitzee-navy">
+                            <span>Who are the trainers?</span>
+                            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 border-t text-sm text-muted-foreground bg-gray-50/50">Our trainers are
+                            certified physical educators with experience in child development and sports coaching.</div>
+                    </div>
+                    <div class="border bg-white rounded-xl overflow-hidden">
+                        <button
+                            class="accordion-trigger w-full flex items-center justify-between p-5 text-left font-bold text-fitzee-navy">
+                            <span>Is there a trial session available?</span>
+                            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform"></i>
+                        </button>
+                        <div class="hidden p-5 border-t text-sm text-muted-foreground bg-gray-50/50">Yes! We offer a
+                            one-week low-cost trial so you and your child can experience the program risk-free.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="py-24 bg-gradient-to-br from-fitzee-navy to-fitzee-blue text-white relative overflow-hidden">
+            <div class="container text-center relative z-10">
+                <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">Bring Back the <br> Joy of Childhood.
+                </h2>
+                <p class="text-xl md:text-2xl opacity-80 mb-12 max-w-2xl mx-auto font-medium">Limited spots per batch.
+                    Secure your child's place in the next cycle starting 1st of next month.</p>
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="register.html"
+                        class="btn btn-lg btn-secondary text-fitzee-navy font-black px-12 transition-transform hover:scale-105">Register
+                        My Child Now</a>
+                    <a href="contact.html"
+                        class="btn btn-lg bg-white/10 hover:bg-white/20 border-white/20 px-10">Schedule a Call</a>
+                    <button class="btn btn-lg bg-green-500 hover:bg-green-600 px-8"><i data-lucide="message-circle"
+                            class="mr-2 h-5 w-5 fill-current"></i> WhatsApp Us</button>
+                </div>
+
+                <div class="mt-16 flex flex-col items-center">
+                    <div class="flex -space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-fitzee-navy"></div>
+                        <div class="w-10 h-10 rounded-full bg-gray-400 border-2 border-fitzee-navy"></div>
+                        <div class="w-10 h-10 rounded-full bg-gray-500 border-2 border-fitzee-navy"></div>
+                        <div class="w-10 h-10 rounded-full bg-gray-600 border-2 border-fitzee-navy"></div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-fitzee-lime text-fitzee-navy flex items-center justify-center text-[10px] font-black border-2 border-fitzee-navy">
+                            +500</div>
+                    </div>
+                    <p class="text-sm font-bold tracking-widest opacity-60 italic">Join 500+ Active Parents Today</p>
+                </div>
+            </div>
+            <!-- Decorative -->
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-fitzee-lime/10 rounded-full blur-3xl"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-fitzee-blue/10 rounded-full blur-3xl"></div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-950 text-gray-400 py-20 border-t border-white/5">
+        <div class="container grid md:grid-cols-4 gap-12 text-sm">
+            <div class="space-y-6">
+                <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-10 w-auto brightness-0 invert">
+                <p class="leading-relaxed opacity-60">India's leading outdoor fitness brand for kids. We're turning
+                    every society playground into a hub of health, safety, and community.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-fitzee-blue transition-colors"><i data-lucide="facebook"
+                            class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">Company</h4>
+                <ul class="space-y-4 opacity-60">
+                    <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                    <li><a href="programs.html" class="hover:text-white transition-colors">Programs</a></li>
+                    <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">Contact Us</h4>
+                <ul class="space-y-4 opacity-60">
+                    <li class="flex items-center"><i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                        official@fitzeeindia.in </li>
+                    <li class="flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> <a
+                            href="tel:+919699849478">+91 9699849478</a></li>
+                    <li class="flex items-center"><i data-lucide="map-pin" class="w-4 h-4 mr-2"></i> Bangalore, India
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-6 uppercase tracking-widest text-[10px]">Newsletter</h4>
+                <form class="flex gap-2 mb-8">
+                    <input type="email" placeholder="Email"
+                        class="bg-white/5 border border-white/10 rounded px-3 py-2 text-xs focus:ring-1 focus:ring-fitzee-blue outline-none flex-1">
+                    <button class="bg-fitzee-blue text-fitzee-navy font-bold px-3 py-2 rounded text-xs">Join</button>
+                </form>
+                <div class="flex gap-4 opacity-20 filter grayscale">
+                    <span class="font-bold">TrustPilot</span>
+                    <span class="font-bold">Google</span>
+                </div>
+            </div>
+        </div>
+        <div
+            class="container mt-20 pt-8 border-t border-white/10 flex justify-between items-center text-[10px] uppercase tracking-widest font-black opacity-30">
+            <p>&copy; 2026 Fitzee India. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        function updateCountdown() {
+            const now = new Date();
+            const hours = 23 - now.getHours();
+            const minutes = 59 - now.getMinutes();
+            const seconds = 59 - now.getSeconds();
+            document.getElementById('countdown').innerText =
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>

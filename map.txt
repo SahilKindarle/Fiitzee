@@ -1,0 +1,190 @@
+ROLE & MODEL BEHAVIOR
+You are Gemini Pro 3 High, acting as a Senior Conversion-Focused Product Designer, UX Strategist, Brand Designer, and Frontend Architect.
+Your task is to generate a complete, responsive, high-conversion marketing website for a children’s outdoor fitness brand named FITZEE, strictly following the rules, structure, content, branding, tone, psychology, and layout defined below.
+NON-NEGOTIABLE RULES
+Do NOT omit, summarize, compress, or reinterpret content
+Every section, headline, CTA, stat, FAQ, pricing detail, and message must be included
+Copy must be used verbatim unless instructed to format
+All pages listed must be created
+Brand colors, gradients, and hierarchy must be strictly respected
+Indian audience context is mandatory
+Website must be optimized for trust, urgency, and parent psychology
+Mobile-first, conversion-first design
+Use semantic HTML structure and modern component-based layout
+Use placeholders where dynamic data is mentioned (phone, countdown, city)
+WEBSITE STRUCTURE (STRICT)
+Generate the following pages exactly:
+1. HOME PAGE
+2. ABOUT US PAGE
+3. PROGRAMS PAGE
+4. PRICING PAGE
+5. CONTACT PAGE
+6. REGISTRATION PAGE
+Each page must be fully built with all subsections listed below.
+BRAND GUIDELINES (STRICT ENFORCEMENT)
+PRIMARY COLORS
+Navy Blue (Headings): #1e3a5f
+Bright Blue (Links / Highlights): #00bfff
+Lime Green (Primary CTA): #7ed957
+Cyan Blue (Tagline): #00a8cc
+Electric Green (CTA Hover): #a0d911
+SECONDARY COLORS
+White: #ffffff
+Light Gray Background: #f5f5f5
+Dark Background: #1a1a1a
+Text Dark: #2c3e50
+Text Medium: #5a6c7d
+Text Light: #95a5a6
+GRADIENTS (USE EXACTLY)
+Hero Gradient: linear-gradient(135deg, #00bfff 0%, #00a8cc 100%)
+Green Energy Gradient: linear-gradient(135deg, #7ed957 0%, #a0d911 100%)
+Shield Gradient: linear-gradient(180deg, #00bfff 0%, #0088cc 100%)
+COLOR USAGE RULES
+Headlines → Navy Blue
+Body text → Text Dark
+Links → Bright Blue
+Primary CTA → Lime Green
+CTA Hover → Electric Green
+Crisis sections → Light red/orange tint
+Solution sections → Light green/blue tint
+Cards → White background with green accents
+IMAGE & VISUAL RULES
+Use realistic photo placeholders with these themes:
+Indian children (ages 5–16)
+Outdoor society play areas
+Trainers with kids
+Group exercises
+Happy, active expressions
+Parents observing
+Community settings
+Videos:
+Hero section includes 30-second looping background video OR animated illustration of kids being active
+PAGE-BY-PAGE IMPLEMENTATION
+🏠 HOME PAGE
+HERO SECTION
+Headline (Exact):
+School → Tuition → Screen → Sleep.
+Where's the CHILDHOOD?
+Subheadline (Exact):
+Give your child what they're missing: Professional outdoor fitness training right in your society.
+Not another class. A break FROM classes.
+CTAs (All Required):
+Primary: Register Now → Registration Page
+Secondary: Watch Video → Modal explainer
+Tertiary: Call Us: +91 [Dynamic Number]
+Background:
+Hero Gradient (Blue → Cyan)
+Overlay video / animation
+PROBLEM SECTION – “The Modern Childhood Crisis”
+Include:
+Timeline with 4 columns (School, Tuition, Screen, Sleep)
+Result Box (Highlighted)
+3 Statistics Cards:
+60% inactivity
+3x anxiety
+45% obesity rise
+Icons, emojis, and urgency styling required.
+SOLUTION SECTION – “Break the Cycle with Fitzee”
+6 Feature Cards:
+We Come to You
+Age-Appropriate Programs
+Certified Trainers
+Evening Timing
+Community Building
+Complete Fitness
+BENEFITS SECTION – Research Backed
+4 stat cards (40%, 20%, 30%, 50%)
+Include research attribution text
+Followed by additional benefits checklist
+PROGRAMS SECTION
+3 cards:
+Junior Fitness (5-8)
+Active Champions (9-12) → Featured
+Teen Warriors (13-16)
+Include:
+Focus
+What they learn
+Timings
+Comparison table
+HOW IT WORKS
+3-step timeline:
+Register
+We Visit You
+Transform Together
+PRICING SECTION
+3 pricing cards:
+3 Months
+6 Months (Most Popular)
+12 Months (Best Savings)
+Include:
+Savings math
+Free kits
+Badges
+Comparison table
+Money-back guarantee
+Payment methods
+Society discount
+Countdown offer banner
+TESTIMONIALS SECTION
+Placeholder carousel for parent reviews.
+FAQ SECTION
+Accordion with ALL 15 QUESTIONS AND ANSWERS exactly as provided.
+FINAL CTA SECTION
+Emotion-driven copy with urgency:
+Limited spots
+Free kit
+Batches starting
+Social proof counter
+Buttons:
+Register My Child Now
+Schedule a Call
+WhatsApp Us
+FOOTER
+4-column footer with:
+Brand story
+Links
+Contact
+Legal
+Newsletter
+Trust badges
+Copyright
+📄 ABOUT US PAGE
+Include:
+Hero story
+Our story
+Mission (10,000 kids by 2027)
+Values (4 cards)
+Team section
+Impact metrics
+Careers CTA
+📚 PROGRAMS PAGE
+Detailed breakdown for:
+Junior Fitness
+Active Champions
+Teen Warriors
+Each includes:
+Philosophy
+Sample weekly schedule
+Skills developed
+Parent notes
+💰 PRICING PAGE
+Standalone pricing view with:
+Comparison
+Guarantees
+FAQs
+Payment flow CTA
+📞 CONTACT PAGE
+Include:
+Form
+WhatsApp
+Phone
+Email
+Service areas
+FAQs
+📝 REGISTRATION PAGE
+Multi-step form:
+Child Info
+Parent Info
+Program Selection
+Payment
+Confirmation

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fitzee | Get Your Society Active</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                container: { center: true, padding: "2rem" },
+                extend: {
+                    colors: {
+                        fitzee: {
+                            navy: "#1e3a5f",
+                            blue: "#00bfff",
+                            lime: "#7ed957",
+                            cyan: "#00a8cc",
+                            electric: "#a0d911",
+                            dark: "#1a1a1a",
+                            textDark: "#2c3e50"
+                        },
+                        border: "hsl(214.3 31.8% 91.4%)",
+                        input: "hsl(214.3 31.8% 91.4%)",
+                        ring: "hsl(214 52% 25%)",
+                        background: "white",
+                        foreground: "hsl(222.2 84% 4.9%)",
+                        primary: { DEFAULT: "#1e3a5f", foreground: "white" },
+                        secondary: { DEFAULT: "#7ed957", foreground: "#1e3a5f" },
+                        muted: { DEFAULT: "hsl(210 40% 96.1%)", foreground: "hsl(215.4 16.3% 46.9%)" },
+                        accent: { DEFAULT: "#00bfff", foreground: "hsl(222.2 47.4% 11.2%)" },
+                        card: { DEFAULT: "white", foreground: "hsl(222.2 84% 4.9%)" },
+                    },
+                    borderRadius: {
+                        lg: "0.5rem",
+                        md: "calc(0.5rem - 2px)",
+                        sm: "calc(0.5rem - 4px)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn { @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2; }
+            .btn-lg { @apply h-12 px-8 text-base; }
+            .btn-primary { @apply bg-fitzee-navy text-white hover:bg-fitzee-navy/90 shadow-lg; }
+            .btn-secondary { @apply bg-fitzee-lime text-fitzee-navy hover:bg-fitzee-lime/90 shadow-lg shadow-lime-500/20; }
+            .btn-outline { @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground; }
+            .btn-ghost { @apply hover:bg-accent hover:text-accent-foreground; }
+            .badge { @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2; }
+            .h2-style { @apply text-3xl font-bold tracking-tight text-fitzee-navy sm:text-4xl; }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen bg-gray-50 text-fitzee-textDark antialiased">
+
+    <header class="w-full border-b bg-white/80 backdrop-blur sticky top-0 z-50">
+        <div class="container flex h-16 items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="src/image/fitzee-logo-op-3.png" alt="Fitzee Logo" class="h-10 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-fitzee-blue">Home</a>
+                <a href="about.html" class="hover:text-fitzee-blue">About</a>
+                <a href="programs.html" class="hover:text-fitzee-blue">Programs</a>
+                <a href="pricing.html" class="hover:text-fitzee-blue">Pricing</a>
+                <a href="contact.html" class="text-fitzee-blue font-bold">Contact</a>
+            </nav>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <div class="container text-center mb-16 px-4">
+            <h1 class="text-4xl md:text-5xl font-black text-fitzee-navy mb-6">Let's Connect</h1>
+            <p class="text-muted-foreground max-w-xl mx-auto font-medium">Have questions? Want to bring Fitzee to your
+                community? Our team is ready to help.</p>
+        </div>
+
+        <div class="container">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+                <!-- Contact Options -->
+                <div class="space-y-12">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm">
+                            <i data-lucide="phone" class="w-6 h-6 text-fitzee-blue mb-4"></i>
+                            <h3 class="font-bold text-fitzee-navy mb-1">Call Us</h3>
+                            <p class="text-sm text-muted-foreground"><a href="tel:+919699849478">+91 9699849478</a></p>
+                            <p class="text-[10px] uppercase font-bold text-gray-400 mt-2 tracking-widest">Mon-Sat,
+                                9AM-7PM</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-fitzee-lime mb-4"></i>
+                            <h3 class="font-bold text-fitzee-navy mb-1">WhatsApp</h3>
+                            <p class="text-sm text-muted-foreground">+91 98765 43211</p>
+                            <p class="text-[10px] uppercase font-bold text-gray-400 mt-2 tracking-widest">Always Online
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm">
+                            <i data-lucide="mail" class="w-6 h-6 text-fitzee-cyan mb-4"></i>
+                            <h3 class="font-bold text-fitzee-navy mb-1">Email</h3>
+                            <p class="text-sm text-muted-foreground">hello@fitzee.in</p>
+                            <p class="text-[10px] uppercase font-bold text-gray-400 mt-2 tracking-widest">24hr
+                                Turnaround</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-fitzee-blue mb-4"></i>
+                            <h3 class="font-bold text-fitzee-navy mb-1">Office</h3>
+                            <p class="text-sm text-muted-foreground">Indiranagar, Bangalore</p>
+                            <p class="text-[10px] uppercase font-bold text-gray-400 mt-2 tracking-widest">KA, India</p>
+                        </div>
+                    </div>
+
+                    <!-- Service Areas -->
+                    <div class="bg-fitzee-navy text-white p-8 rounded-3xl shadow-xl">
+                        <h3 class="text-xl font-black mb-6 uppercase tracking-tight">Active Service Areas</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-2 text-sm font-medium"><i data-lucide="check"
+                                    class="text-fitzee-lime w-4 h-4"></i> <span>Whitefield</span></div>
+                            <div class="flex items-center space-x-2 text-sm font-medium"><i data-lucide="check"
+                                    class="text-fitzee-lime w-4 h-4"></i> <span>Sarjapur</span></div>
+                            <div class="flex items-center space-x-2 text-sm font-medium"><i data-lucide="check"
+                                    class="text-fitzee-lime w-4 h-4"></i> <span>HSR Layout</span></div>
+                            <div class="flex items-center space-x-2 text-sm font-medium"><i data-lucide="check"
+                                    class="text-fitzee-lime w-4 h-4"></i> <span>Bellandur</span></div>
+                        </div>
+                        <p class="mt-8 text-xs opacity-60">* Opening shortly in JP Nagar & Indiranagar. <a href="#"
+                                class="underline">Suggest your society.</a></p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-white relative overflow-hidden">
+                    <h2 class="text-2xl font-black text-fitzee-navy mb-8 uppercase tracking-tighter italic">Send a
+                        Message</h2>
+                    <form class="space-y-6 relative z-10">
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase opacity-40">Your Name</label>
+                            <input type="text" placeholder="John Doe"
+                                class="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-fitzee-blue outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase opacity-40">Phone / WhatsApp</label>
+                            <input type="tel" placeholder="+91"
+                                class="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-fitzee-blue outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase opacity-40">Society Name</label>
+                            <input type="text" placeholder="e.g. Prestige Shantiniketan"
+                                class="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-fitzee-blue outline-none transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-black uppercase opacity-40">Message</label>
+                            <textarea rows="4" placeholder="How can we help you?"
+                                class="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-fitzee-blue outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <button
+                            class="w-full btn btn-primary py-6 rounded-xl font-black uppercase tracking-widest text-xs shadow-xl shadow-navy-950/20">Send
+                            Inquiry</button>
+                    </form>
+                    <!-- Background blobs -->
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-fitzee-lime/10 rounded-full blur-2xl"></div>
+                </div>
+
+            </div>
+
+            <!-- FAQs for Contact Page -->
+            <div class="mt-32 max-w-3xl mx-auto">
+                <h2 class="text-3xl font-black text-fitzee-navy text-center mb-12">Common Questions</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-2xl border overflow-hidden">
+                        <button
+                            class="w-full p-6 text-left font-bold text-fitzee-navy flex justify-between items-center group">
+                            <span>How do I get Fitzee in my society?</span>
+                            <i data-lucide="plus"
+                                class="w-5 h-5 opacity-40 group-hover:rotate-90 transition-transform"></i>
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-2xl border overflow-hidden">
+                        <button
+                            class="w-full p-6 text-left font-bold text-fitzee-navy flex justify-between items-center group">
+                            <span>What is the minimum batch size?</span>
+                            <i data-lucide="plus"
+                                class="w-5 h-5 opacity-40 group-hover:rotate-90 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 py-12 text-center text-[10px] font-black uppercase tracking-widest opacity-40">
+        &copy; 2026 Fitzee India. All rights reserved.
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script> lucide.createIcons(); </script>
+</body>
+
+</html>
