@@ -46,14 +46,14 @@ module.exports = {
         },
         // Brand Specifics (Direct Access)
         fitzee: {
-            navy: "#1e3a5f",
-            blue: "#00bfff",
-            lime: "#7ed957",
-            cyan: "#00a8cc",
-            electric: "#a0d911",
-            dark: "#1a1a1a",
-            textDark: "#2c3e50",
-            textMedium: "#5a6c7d", 
+          navy: "#1e3a5f",
+          blue: "#00bfff",
+          lime: "#7ed957",
+          cyan: "#00a8cc",
+          electric: "#a0d911",
+          dark: "#1a1a1a",
+          textDark: "#2c3e50",
+          textMedium: "#5a6c7d",
         }
       },
       borderRadius: {

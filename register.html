@@ -213,6 +213,38 @@
                             <input type="email" name="parent_email"
                                 class="flex h-10 w-full rounded-md border border-input px-3 py-2 text-sm focus-visible:ring-1 focus-visible:ring-fitzee-blue">
                         </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium">Society Name</label>
+                            <input type="text" name="society_name"
+                                class="flex h-10 w-full rounded-md border border-input px-3 py-2 text-sm focus-visible:ring-1 focus-visible:ring-fitzee-blue">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium">Address</label>
+                            <input type="text" name="address"
+                                class="flex h-10 w-full rounded-md border border-input px-3 py-2 text-sm focus-visible:ring-1 focus-visible:ring-fitzee-blue">
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium">State</label>
+                                <select id="state-select" name="state"
+                                    class="flex h-10 w-full rounded-md border border-input px-3 py-2 text-sm focus-visible:ring-1 focus-visible:ring-fitzee-blue">
+                                    <option value="">Select State</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium">City</label>
+                                <select id="city-select" name="city" disabled
+                                    class="flex h-10 w-full rounded-md border border-input px-3 py-2 text-sm focus-visible:ring-1 focus-visible:ring-fitzee-blue disabled:bg-gray-100 disabled:cursor-not-allowed">
+                                    <option value="">Select City</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium">Pincode</label>
+                                <input type="text" name="pincode" pattern="[0-9]{6}" maxlength="6"
+                                    class="flex h-10 w-full rounded-md border border-input px-3 py-2 text-sm focus-visible:ring-1 focus-visible:ring-fitzee-blue"
+                                    placeholder="6-digit PIN">
+                            </div>
+                        </div>
                         <div class="flex gap-4">
                             <button type="button" class="btn btn-outline w-full" onclick="nextStep(1)">Back</button>
                             <button type="button" class="btn btn-primary w-full shadow-lg" onclick="nextStep(3)">Next:
@@ -382,6 +414,80 @@
                     document.getElementById('success-state').classList.remove('hidden');
                     if (window.lucide) lucide.createIcons();
                 });
+        }
+
+        const stateCityData = {
+            "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Kurnool", "Rajahmundry", "Tirupati"],
+            "Arunachal Pradesh": ["Itanagar", "Naharlagun", "Pasighat", "Tawang"],
+            "Assam": ["Guwahati", "Silchar", "Dibrugarh", "Jorhat", "Tezpur", "Nagaon"],
+            "Bihar": ["Patna", "Gaya", "Bhagalpur", "Muzaffarpur", "Darbhanga", "Purnia"],
+            "Chhattisgarh": ["Raipur", "Bilaspur", "Durg", "Bhilai", "Korba", "Jagdalpur"],
+            "Goa": ["Panaji", "Margao", "Vasco da Gama", "Mapusa", "Ponda"],
+            "Gujarat": ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Bhavnagar", "Jamnagar", "Junagadh"],
+            "Haryana": ["Gurgaon", "Faridabad", "Panipat", "Ambala", "Karnal", "Hisar", "Rohtak"],
+            "Himachal Pradesh": ["Shimla", "Solan", "Mandi", "Dharamshala", "Kullu", "Una"],
+            "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad", "Bokaro", "Deoghar"],
+            "Karnataka": ["Bangalore", "Mysore", "Hubli", "Dharwad", "Mangalore", "Belgaum", "Shimoga", "Davangere"],
+            "Kerala": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur", "Kollam", "Alappuzha", "Palakkad"],
+            "Madhya Pradesh": ["Indore", "Bhopal", "Jabalpur", "Gwalior", "Ujjain", "Sagar", "Ratlam"],
+            "Maharashtra": ["Mumbai", "Pune", "Nagpur", "Nashik", "Thane", "Aurangabad", "Solapur", "Kolhapur", "Amravati"],
+            "Manipur": ["Imphal", "Thoubal", "Churachandpur"],
+            "Meghalaya": ["Shillong", "Tura", "Jowai"],
+            "Mizoram": ["Aizawl", "Lunglei", "Champhai"],
+            "Nagaland": ["Kohima", "Dimapur", "Mokokchung"],
+            "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela", "Sambalpur", "Berhampur", "Balasore"],
+            "Punjab": ["Ludhiana", "Amritsar", "Jalandhar", "Patiala", "Bathinda", "Mohali"],
+            "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur", "Kota", "Ajmer", "Bikaner", "Alwar"],
+            "Sikkim": ["Gangtok", "Namchi", "Gyalshing"],
+            "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Salem", "Tiruchirappalli", "Erode", "Vellore", "Thoothukudi"],
+            "Telangana": ["Hyderabad", "Warangal", "Nizamabad", "Khammam", "Karimnagar"],
+            "Tripura": ["Agartala", "Udaipur", "Dharmanagar"],
+            "Uttar Pradesh": ["Lucknow", "Kanpur", "Agra", "Varanasi", "Meerut", "Noida", "Ghaziabad", "Prayagraj", "Gorakhpur"],
+            "Uttarakhand": ["Dehradun", "Haridwar", "Roorkee", "Haldwani", "Rishikesh"],
+            "West Bengal": ["Kolkata", "Howrah", "Durgapur", "Siliguri", "Asansol", "Malda", "Kharagpur"],
+
+            // Union Territories
+            "Delhi": ["New Delhi", "North Delhi", "South Delhi", "East Delhi", "West Delhi"],
+            "Chandigarh": ["Chandigarh"],
+            "Dadra and Nagar Haveli and Daman and Diu": ["Daman", "Diu", "Silvassa"],
+            "Jammu and Kashmir": ["Srinagar", "Jammu", "Anantnag", "Baramulla"],
+            "Ladakh": ["Leh", "Kargil"],
+            "Lakshadweep": ["Kavaratti"],
+            "Puducherry": ["Puducherry", "Karaikal", "Mahe", "Yanam"],
+            "Andaman and Nicobar Islands": ["Port Blair"]
+        };
+
+
+        const stateSelect = document.getElementById('state-select');
+        const citySelect = document.getElementById('city-select');
+
+        // Populate States
+        if (stateSelect) {
+            Object.keys(stateCityData).sort().forEach(state => {
+                const option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            });
+
+            stateSelect.addEventListener('change', function () {
+                const selectedState = this.value;
+
+                // Reset Cities
+                citySelect.innerHTML = '<option value="">Select City</option>';
+
+                if (selectedState && stateCityData[selectedState]) {
+                    citySelect.disabled = false;
+                    stateCityData[selectedState].sort().forEach(city => {
+                        const option = document.createElement('option');
+                        option.value = city;
+                        option.textContent = city;
+                        citySelect.appendChild(option);
+                    });
+                } else {
+                    citySelect.disabled = true;
+                }
+            });
         }
 
         lucide.createIcons();
