@@ -1,0 +1,189 @@
+📄 PAGE 1: HERO SECTION (Top of Homepage)
+CURRENT CONTENT:
+Headline: "School → Tuition → Screen → Sleep. Where's the CHILDHOOD?"
+Subheadline: "Give your child what they're missing: Professional outdoor fitness training right in your society. Not another class. A break FROM classes."
+CTA Button: "Join 500+ Parents" or similar with numbers
+Video placeholder: "VIDEO: KIDS PLAYING IN SOCIETY GARDEN"
+CHANGES TO MAKE:
+✅ ADD NEW TAGLINE (Above or with headline):
+ACTIVE TODAY, STRONGER TOMORROW
+"Outdoor fitness programs for kids aged 5–16, right in your society."
+✅ UPDATE CTA BUTTON:
+Remove: "Join 500+ Parents" (or any text with numbers) New Text: "Start Your Child's Transformation Journey with Fitzee"
+✅ REMOVE:
+Any numerical claims like "500+ parents", "1000+ kids", etc.
+
+📄 PAGE 2: "BREAK THE CYCLE WITH FITZEE" SECTION
+CURRENT CONTENT:
+Six feature cards with icons:
+We Come to You
+Age-Appropriate
+Certified Trainers ← NEEDS CHANGE Experienced Trainers
+Evening Timing
+Community Building
+Complete Fitness
+CHANGES TO MAKE:
+✅ CARD 3 - TRAINERS:
+Current Heading: "Certified Trainers" New Heading: "Experienced Trainers"
+
+📄 PAGE 3: "INTRODUCING FITZEE" SECTION (NEW SECTION TO ADD)
+✅ ADD THIS NEW SECTION:
+Heading:
+"Introducing Fitzee"
+Content:
+"Unlike academies or gyms, Fitzee focuses on fun-first fitness, not performance pressure. We don't build athletes; we build healthy, happy kids."
+Design Suggestion:
+Place after "Break the Cycle" section
+Use engaging visual (kids playing/smiling)
+Keep it clean and prominent
+
+📄 PAGE 4: "OUR PROGRAMS" SECTION
+CURRENT CONTENT:
+Three program cards:
+CARD 1: Junior Fitness (Ages 5-8)
+Description: "Focus on fundamental motor skills and coordination through fun, active games."
+Duration: "3 sessions/week | 60 mins"
+CARD 2: Active Champions (Ages 9-12) - MOST POPULAR
+Description: "Structured sports concepts, agility training, and team-building challenges."
+Duration: "3 sessions/week | 75 mins"
+CARD 3: Teen Warriors (Ages 13-16)
+Description: "Functional strength, HIIT for teens, and stress-relief focused physical activity."
+Duration: "3 sessions/week | 90 mins"
+CHANGES TO MAKE:
+✅ UPDATE DURATIONS:
+CARD 1: Junior Fitness Remove: "3 sessions/week  New: "Monday to Friday | 60-75 mins"
+CARD 2: Active Champions Remove: "3 sessions/week  New: "Monday to Friday | 60-75 mins"
+CARD 3: Teen Warriors Remove: "3 sessions/week  New: "Monday to Friday | 60-75 mins"
+
+📄 PAGE 5: CREDIBILITY/SCIENCE SECTION (UPDATE EXISTING)
+CURRENT CONTENT:
+May have text like: "Science-backed benefits" or similar
+CHANGES TO MAKE:
+✅ REPLACE WITH:
+Heading: "Backed by child development research" Subtext: "Our curriculum is designed to align with physical and cognitive growth milestones."
+
+📄 PAGE 6: "PRICING PLANS" SECTION
+CURRENT CONTENT:
+Three pricing cards:
+PLAN 1: 1 Month
+Price: ₹3,999/mo
+Features: 2 Sessions/Week, Monthly Progress Report
+Button: "Select Plan"
+PLAN 2: 3 Months (Highlighted)
+Price: ₹8,999/mo
+Save ₹3,000 Total
+Features: 3 Sessions/Week, Free Fitzee Jersey
+Button: "Select Plan"
+PLAN 3: 6 Months
+Price: ₹15,999/mo
+Best Savings (Save ₹12,000+)
+Features: 3 Sessions/Week, Free Full Training Kit
+Button: "Select Plan"
+CHANGES TO MAKE:
+✅ UPDATE ALL THREE PLANS:
+PLAN 1: 1 Month
+Price: ₹3,999/mo
+Remove: "2 Sessions/Week"
+Add: "Monday to Friday | 60-75 minutes"
+Add Below Price: "₹133 / day" (in smaller green text)
+Keep: Monthly Progress Report
+Button: "Select Plan"
+PLAN 2: 3 Months
+Price: ₹8,999 3mo (verify this matches ₹8,999 or use corrected amount)
+Save ₹3,000 Total
+Remove: "3 Sessions/Week"
+Add: "Monday to Friday | 60-75 minutes"
+Add Below Price: "₹99 / day" (in smaller green text)
+Keep: Free Fitzee Jersey
+Button: "Select Plan"
+PLAN 3: 6 Months
+Price: ₹ (verify this matches ₹15,999 or use corrected amount)
+Best Savings (Save ₹12,000+)
+Remove: "3 Sessions/Week"
+Add: "Monday to Friday | 60-75 minutes"
+Add Below Price: "₹88 / day" (in smaller green text)
+Keep: Free Full Training Kit
+Button: "Select Plan"
+✅ UPDATE SECTION HEADING:
+New Heading: "Choose Your Growth Plan"
+
+📄 PAGE 7: "PRICE VS. VALUE" SECTION (NEW SECTION TO ADD)
+✅ ADD THIS NEW SECTION AFTER PRICING:
+Main Heading:
+"Is your child's health worth more than a screen?"
+Subheading:
+"Most parents spend more on screen-time distractions than on their child's physical health."
+Three Feature Cards/Points:
+CARD 1: The Cost of Inactivity 📱
+Icon: Screen/Phone icon
+Text: "High screen time leads to poor posture, eye strain, and low energy."
+CARD 2: The Fitzee Math 💰
+Icon: Rupee/Calculator icon
+Text: "For less than the cost of a daily snack or a mobile EMI (just ₹88/day), we get your child off the couch and onto the field."
+CARD 3: The Impact ⚡
+Icon: Energy/Sports icon
+Text: "Replace 60 minutes of 'Digital Fatigue' with 60 minutes of 'Active Joy.'"
+
+📄 PAGE 8: "WHAT PARENTS SAY" SECTION
+CURRENT CONTENT:
+Section heading: "What Parents Say"
+Testimonial 1: Priya S. (Whitefield) - "My son finally enjoys being away from his phone..."
+Testimonial 2: Rajesh K. (HSR Layout) - "The convenience of having sessions right in our society park..."
+CHANGES TO MAKE:
+❌ REMOVE ENTIRE SECTION:
+Delete section heading
+Delete all testimonial cards
+Delete all testimonial content
+Note: This section will be removed completely for now.
+
+📄 PAGE 9: FOOTER / TRUST BADGES SECTION
+CURRENT CONTENT:
+"30-Day Money Back Guarantee" badge/icon
+Payment methods: "UPI | Cards | EMI | Netbanking"
+Contact: Call: +91 [number]
+WhatsApp icon/button 
+Other footer links
+CHANGES TO MAKE:
+❌ REMOVE:
+"30-Day Money Back Guarantee" (icon and text)
+✅ KEEP:
+Payment methods: "UPI | Cards | EMI | Netbanking"
+Contact: Call: +91 9699849478
+✅ FIX WHATSAPP BUTTON:
+Make it clickable/functional make it working
+Optional pre-filled message: "Hi Fitzee, I want to know more about your programs for my child."
+Make it sticky/floating on mobile
+
+📄 THROUGHOUT ENTIRE WEBSITE
+❌ GLOBAL REMOVALS:
+Remove ANY instance of:
+"500+ parents"
+"1000+ kids"
+"X number of families"
+Any numerical social proof claims
+✅ VERIFY:
+All WhatsApp buttons work properly
+All "Register Now" buttons are functional
+Mobile responsiveness maintained
+Contact number displays correctly: +91 9699849478
+
+📊 SUMMARY TABLE: SECTION-BY-SECTION
+
+
+ DEVELOPER WORKFLOW RECOMMENDATION:
+Phase 1 (Critical Updates - Do First):
+Remove "What Parents Say" section
+Remove "Money Back Guarantee"
+Update all session frequencies to "Monday to Friday"
+Fix WhatsApp integration
+Remove all number claims
+Phase 2 (Text Updates):
+Change "Certified" to "Experienced"
+Update Hero CTA text
+Update pricing section heading
+Add daily cost calculations
+Phase 3 (New Content):
+Add "Introducing Fitzee" section
+Add credibility/research statement
+Add "Price vs. Value" section
+Add new hero tagline
